@@ -34,6 +34,7 @@ const showImages = (images) => {
   })
   toggleSpinner();
 }
+
 const getImages = (query) => {
   toggleSpinner();
   fetch(`https://pixabay.com/api/?key=${KEY}&q=${query}&image_type=photo&pretty=true`)
@@ -52,6 +53,7 @@ const selectItem = (event, img) => {
     sliders.push(img);
   }
 }
+
 let timer
 const createSlider = () => {
   // check slider image length
@@ -59,6 +61,7 @@ const createSlider = () => {
     alert('Select at least 2 image.');
     return;
   }
+
   // crate slider previous next area
   sliderContainer.innerHTML = '';
   const prevNext = document.createElement('div');
@@ -81,6 +84,7 @@ const createSlider = () => {
     item.innerHTML = `<img class="w-100" src="${slide}" alt="">`;
     sliderContainer.appendChild(item)
   })
+
   changeSlide(0)
   timer = setInterval(function () {
     slideIndex++;
@@ -100,12 +104,10 @@ const changeSlide = (index) => {
     slideIndex = items.length - 1;
     index = slideIndex;
   };
-
   if (index >= items.length) {
     index = 0;
     slideIndex = 0;
   }
-
   items.forEach(item => {
     item.style.display = "none"
   })
