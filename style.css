@@ -5,7 +5,9 @@
     margin: 0 auto;
     position: relative;
   }
-  
+  .form-control{
+    width: 50%;
+  }
   .gallery-header {
     display: none;
   }
@@ -17,7 +19,9 @@
   .img-thumbnail {
     cursor: pointer;
   }
-  
+  .img-height{
+    height: 342px;
+  }
   .added {
     border: 2px solid #1e1743;
     border-radius: 5px;
