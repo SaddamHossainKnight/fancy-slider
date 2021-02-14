@@ -34,6 +34,8 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
+    <div id="fullImage" class="d-flex justify-content-center">
+    </div>
 
     <div class="images">
       <div class="row">
@@ -57,8 +59,9 @@
       <section class="mt-5" id="sliders">
       </section>
       <div class="dots d-flex mt-2 w-100 justify-content-center align-items-center bg-light">
-        <span class="dot" onclick="changeItem(-1)"></span>
-        <span class="dot" onclick="changeItem(1)"></span>
+        <span id='left' class="dot" onclick="changeItem(-1)"></span>
+        <span class="dot"></span>
+        <span id='right' class="dot" onclick="changeItem(1)"></span>
       </div>
     </div>
   </div>

@@ -12,6 +12,7 @@ document.getElementById('search')
       document.getElementById('search-btn').click();
     }
   })
+
 // selected image 
 let sliders = [];
 // If this key doesn't work
@@ -51,7 +52,7 @@ const selectItem = (event, img) => {
     sliders.push(img);
   }
 }
-var timer
+let timer
 const createSlider = () => {
   // check slider image length
   if (sliders.length < 2) {
@@ -74,13 +75,10 @@ const createSlider = () => {
   const durations = document.getElementById('duration').value || 1000;
   const duration = Math.abs(durations);
 
-
   sliders.forEach(slide => {
     let item = document.createElement('div')
     item.className = "slider-item";
-    item.innerHTML = `<img class="w-100"
-    src="${slide}"
-    alt="">`;
+    item.innerHTML = `<img class="w-100" src="${slide}" alt="">`;
     sliderContainer.appendChild(item)
   })
   changeSlide(0)
@@ -97,10 +95,9 @@ const changeItem = index => {
 
 // change slide item
 const changeSlide = (index) => {
-
   const items = document.querySelectorAll('.slider-item');
   if (index < 0) {
-    slideIndex = items.length - 1
+    slideIndex = items.length - 1;
     index = slideIndex;
   };
 
